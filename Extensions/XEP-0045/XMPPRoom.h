@@ -134,6 +134,7 @@ static NSString *const XMPPMUCOwnerNamespace = @"http://jabber.org/protocol/muc#
 #pragma mark Room Moderation
 
 - (void)fetchBanList;
+- (void)fetchOwnersList;
 - (void)fetchMembersList;
 - (void)fetchModeratorsList;
 
@@ -301,6 +302,9 @@ static NSString *const XMPPMUCOwnerNamespace = @"http://jabber.org/protocol/muc#
 
 - (void)xmppRoom:(XMPPRoom *)sender didFetchBanList:(NSArray *)items;
 - (void)xmppRoom:(XMPPRoom *)sender didNotFetchBanList:(XMPPIQ *)iqError;
+
+- (void)xmppRoom:(XMPPRoom *)sender didFetchOwnersList:(NSArray *)items;
+- (void)xmppRoom:(XMPPRoom *)sender didNotFetchOwnersList:(XMPPIQ *)iqError;
 
 - (void)xmppRoom:(XMPPRoom *)sender didFetchMembersList:(NSArray *)items;
 - (void)xmppRoom:(XMPPRoom *)sender didNotFetchMembersList:(XMPPIQ *)iqError;
