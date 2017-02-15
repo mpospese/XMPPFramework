@@ -100,6 +100,7 @@
  * The XMPPMessageArchiving class is configured to ignore the passed
  * storage class in its init method if this method returns NO.
 **/
+
 - (BOOL)configureWithParent:(XMPPMessageArchiving *)aParent queue:(dispatch_queue_t)queue;
 
 	
