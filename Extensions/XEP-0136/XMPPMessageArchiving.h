@@ -70,6 +70,12 @@
 // users/resources according to the underlying storage mechanism.
 // 
 
+/**
+ * 
+**/
+- (void)archiveMessage:(XMPPMessage *)message outgoing:(BOOL)isOutgoing xmppStream:(XMPPStream *)stream;
+
+@optional
 
 // 
 // 
@@ -96,13 +102,7 @@
 **/
 - (BOOL)configureWithParent:(XMPPMessageArchiving *)aParent queue:(dispatch_queue_t)queue;
 
-/**
- * 
-**/
-- (void)archiveMessage:(XMPPMessage *)message outgoing:(BOOL)isOutgoing xmppStream:(XMPPStream *)stream;
-
-@optional
-
+	
 /**
  * The storage class may optionally persistently store the client preferences.
 **/
