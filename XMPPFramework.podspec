@@ -386,6 +386,7 @@ s.source = { :git => 'https://github.com/heigong/XMPPFramework.git', :branch => 
     ss.dependency 'XMPPFramework/XEP-0136'
     ss.dependency 'XMPPFramework/XEP-0147'
     ss.dependency 'XMPPFramework/XEP-0153'
+    ss.dependency 'XMPPFramework/XEP-0166'
     ss.dependency 'XMPPFramework/XEP-0172'
     ss.dependency 'XMPPFramework/XEP-0184'
     ss.dependency 'XMPPFramework/XEP-0191'
