@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'XMPPFramework'
-  s.version = '3.7.0'
+  s.version = '3.7.0.2'
 
   s.osx.deployment_target = '10.8'
   s.ios.deployment_target = '8.0'
@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
 
   s.license = { :type => 'BSD', :file => 'copying.txt' }
   s.summary = 'An XMPP Framework in Objective-C for the Mac / iOS development community.'
-  s.homepage = 'https://github.com/robbiehanson/XMPPFramework'
+  s.homepage = 'https://github.com/heigong/XMPPFramework'
   s.author = { 'Robbie Hanson' => 'robbiehanson@deusty.com' }
-#  s.source = { :git => 'https://github.com/robbiehanson/XMPPFramework.git', :tag => s.version }
+#  s.source = { :git => 'https://github.com/heigong/XMPPFramework.git', :tag => s.version }
 s.source = { :git => 'https://github.com/heigong/XMPPFramework.git', :branch => 'master' }
   s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}']
 
@@ -230,7 +230,7 @@ s.source = { :git => 'https://github.com/heigong/XMPPFramework.git', :branch => 
   ss.dependency 'XMPPFramework/Core'
   ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
   end
-
+  
   s.subspec 'XEP-0172' do |ss|
   ss.source_files = 'Extensions/XEP-0172/**/*.{h,m}'
   ss.dependency 'XMPPFramework/Core'
