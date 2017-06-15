@@ -19,12 +19,16 @@
 
 @implementation XMPPMessageArchiveManagement
 
-- (void)retrieveMessageArchiveWithFields:(NSArray *)fields withResultSet:(XMPPResultSet *)resultSet {
+- (void)retrieveMessageArchiveWithFields:(NSArray *)fields withResultSet:(XMPPResultSet *)resultSet to: (NSString*)to {
 	dispatch_block_t block = ^{
 
 		XMPPIQ *iq = [XMPPIQ iqWithType:@"set"];
 		[iq addAttributeWithName:@"id" stringValue:[XMPPStream generateUUID]];
-
+        
+        if(to){
+            [iq addAttributeWithName:@"to" stringValue:to];
+        }
+        
 		self.queryID = [XMPPStream generateUUID];
 		
 		NSXMLElement *queryElement = [NSXMLElement elementWithName:@"query" xmlns:XMLNS_XMPP_MAM];

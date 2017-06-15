@@ -15,7 +15,7 @@
 	XMPPIDTracker *xmppIDTracker;
 }
 
-- (void)retrieveMessageArchiveWithFields:(NSArray *)fields withResultSet:(XMPPResultSet *)resultSet;
+- (void)retrieveMessageArchiveWithFields:(NSArray *)fields withResultSet:(XMPPResultSet *)resultSet to: (NSString*)to;
 - (void)retrieveFormFields;
 + (NSXMLElement *)fieldWithVar:(NSString *)var type:(NSString *)type andValue:(NSString *)value;
 
