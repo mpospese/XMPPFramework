@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   on a 12-core Mac Pro. (And it won\'t block the main thread... at all).'
 
   s.requires_arc = true
-  s.default_subspec = "All"
+  s.default_subspec = "default"
 
   # XMPPFramework.h is used internally in the framework to let modules know
   # what other optional modules are available. Since we don't know yet which
